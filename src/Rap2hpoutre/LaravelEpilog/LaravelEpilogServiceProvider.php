@@ -43,6 +43,7 @@ class LaravelEpilogServiceProvider extends ServiceProvider
 			);
 			$logger->pushHandler($slackHandler);
 		}
+		
     }
 
     /**
