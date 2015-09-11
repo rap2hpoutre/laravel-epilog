@@ -4,6 +4,8 @@
 
 Power up logs. Add client context (IP, referer, user ID and more). Notify on slack on production error.
 
+![test](https://cloud.githubusercontent.com/assets/1575946/9824692/caeda282-58ce-11e5-9c57-3f186df57a7b.png)
+
 ## Install
 
 Install via composer
