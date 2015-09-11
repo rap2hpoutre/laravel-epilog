@@ -1,5 +1,5 @@
 # Epilog for Laravel 5
-
+[![Packagist](https://img.shields.io/packagist/l/rap2hpoutre/laravel-epilog.svg)](https://packagist.org/packages/rap2hpoutre/laravel-epilog) [![Packagist](https://img.shields.io/packagist/v/rap2hpoutre/laravel-epilog.svg)](https://packagist.org/packages/rap2hpoutre/laravel-epilog) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rap2hpoutre/laravel-epilog/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rap2hpoutre/laravel-epilog/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/rap2hpoutre/laravel-epilog/badges/build.png?b=master)](https://scrutinizer-ci.com/g/rap2hpoutre/laravel-epilog/build-status/master)
 ## What?
 
 Power up logs. Add client context (IP, referer, user ID and more). Notify on slack on production error.
