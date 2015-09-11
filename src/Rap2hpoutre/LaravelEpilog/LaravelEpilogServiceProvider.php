@@ -36,7 +36,7 @@ class LaravelEpilogServiceProvider extends ServiceProvider
             return $record;
         });
 
-        if (app()->environment('TODO')) {
+        if (app()->environment(config('epilog.slack.env'))) {
             $slackHandler = new \Monolog\Handler\SlackHandler(
                 config('epilog.slack.token'),
                 config('epilog.slack.channel'),
