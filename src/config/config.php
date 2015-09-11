@@ -1,3 +1,4 @@
+<?php
 return [
     'slack' => [
         'token' => 'your-token',
