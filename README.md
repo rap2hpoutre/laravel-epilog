@@ -6,8 +6,6 @@ Power up logs. Add client context (IP, referer, user ID and more). Notify on sla
 
 ## Install
 
-Install
--------
 Install via composer
 ```
 composer require rap2hpoutre/laravel-epilog
