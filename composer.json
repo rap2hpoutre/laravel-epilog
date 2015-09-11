@@ -1,0 +1,22 @@
+{
+    "name": "rap2hpoutre/laravel-epilog",
+    "description": "More info in laravel's log",
+    "license": "MIT",
+    "keywords": ["log", "laravel", "logging"],
+    "authors": [
+        {
+            "name": "rap2hpoutre",
+            "email": "raphael@ornikar.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "5.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Rap2hpoutre\\LaravelEpilog\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
