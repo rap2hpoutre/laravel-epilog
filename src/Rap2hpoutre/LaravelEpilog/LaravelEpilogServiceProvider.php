@@ -22,7 +22,7 @@ class LaravelEpilogServiceProvider extends ServiceProvider
         $logger->pushProcessor(function ($record) {
             $info = "\n---\n";
             if (\Auth::check()) {
-                $info .= 'User #' . Auth::user()->id . ' (' . Auth::user()->email . ') - ';
+                $info .= 'User #' . \Auth::user()->id . ' (' . \Auth::user()->email . ') - ';
             }
             if (isset($_SERVER['REMOTE_ADDR'])) $info .= 'IP: ' . $_SERVER['REMOTE_ADDR'];
             if (isset($_SERVER['REQUEST_URI'])) $info .= "\n" . $_SERVER['REQUEST_METHOD'] . " " . url($_SERVER['REQUEST_URI']);
