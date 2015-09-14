@@ -19,8 +19,9 @@ class LaravelEpilogServiceProvider extends ServiceProvider
 
         $logger = \Log::getMonolog();
 
+        // Additional info in message
         $logger->pushProcessor(function($record) {
-            $info = "\n---\n";
+            $info = '';
             if (\Auth::check()) {
                 $info .= 'User #' . \Auth::user()->id . ' (' . \Auth::user()->email . ') - ';
             }
@@ -33,15 +34,18 @@ class LaravelEpilogServiceProvider extends ServiceProvider
             if (isset($_SERVER['HTTP_REFERER'])) {
                 $info .= "\nReferer: " . $_SERVER['HTTP_REFERER'];
             }
-            $info .= "\n---";
-            if (strpos($record['message'], "\n")) {
-                $record['message'] = preg_replace("/\n/", $info . "\n", $record['message'], 1);
-            } else {
-                $record['message'] .= $info . "\n";
+            if ($info) {
+                $info = "\n---\n$info\n---";
+                if (strpos($record['message'], "\n")) {
+                    $record['message'] = preg_replace("/\n/", $info . "\n", $record['message'], 1);
+                } else {
+                    $record['message'] .= $info . "\n";
+                }
             }
             return $record;
         });
 
+        // Slack notification
         if (app()->environment(config('epilog.slack.env'))) {
             $slackHandler = new \Monolog\Handler\SlackHandler(
                 config('epilog.slack.token'),
