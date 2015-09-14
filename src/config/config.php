@@ -38,6 +38,6 @@ return [
          * 
          * String or array. Empty array means disabled.
          */
-        'env' => 'production' //
+        'env' => 'production'
     ]
 ];
