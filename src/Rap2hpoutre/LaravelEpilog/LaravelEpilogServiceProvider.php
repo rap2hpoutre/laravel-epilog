@@ -53,7 +53,10 @@ class LaravelEpilogServiceProvider extends ServiceProvider
                 config('epilog.slack.username'),
                 true,
                 ':skull:',
-                \Monolog\Logger::ERROR
+                \Monolog\Logger::ERROR,
+                true,
+                false,
+                true
             );
             $logger->pushHandler($slackHandler);
         }
