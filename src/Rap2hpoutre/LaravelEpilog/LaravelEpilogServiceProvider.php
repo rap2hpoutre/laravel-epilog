@@ -55,7 +55,7 @@ class LaravelEpilogServiceProvider extends ServiceProvider
                 ':skull:',
                 \Monolog\Logger::ERROR,
                 true,
-                false,
+                true,
                 true
             );
             $logger->pushHandler($slackHandler);
